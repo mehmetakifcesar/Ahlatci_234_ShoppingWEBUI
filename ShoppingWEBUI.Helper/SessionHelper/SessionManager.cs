@@ -2,7 +2,6 @@
 using ShoppingWEBUI.Core.DTO;
 using ShoppingWEBUI.Core.ViewModel;
 
-
 namespace ShoppingWEBUI.Helper.SessionHelper
 {
     public class SessionManager
@@ -13,6 +12,9 @@ namespace ShoppingWEBUI.Helper.SessionHelper
             get => AppHttpContext.Current.Session.GetObject<LoginDTO>("LoginDTO");
             set => AppHttpContext.Current.Session.SetObject("LoginDTO", value);
         }
+       
+
+       
 
        
     }

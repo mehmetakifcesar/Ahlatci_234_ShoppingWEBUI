@@ -23,7 +23,7 @@ namespace ShoppingWEBUI.WebUI.Middleware
             catch (Exception ex)
             {
 
-                httpContext.Response.Redirect("/ExtPage/Error.html");
+                //httpContext.Response.Redirect("/ExtPage/Error.html");
             }
 
             

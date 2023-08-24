@@ -1,0 +1,78 @@
+﻿@using ShoppingWEBUI.Core.DTO
+@model LoginDTO
+
+@Html.AntiForgeryToken()
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Shopping234</title>
+    <link rel="icon" type="image/png" href="/UserDocs/images/favicon.png"><!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i"><!-- css -->
+    <link rel="stylesheet" href="/UserDocs/vendor/bootstrap-4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/UserDocs/vendor/owl-carousel-2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/UserDocs/css/style.css"><!-- js -->
+    <script src="/UserDocs/vendor/jquery-3.3.1/jquery.min.js"></script>
+    <script src="/UserDocs/vendor/bootstrap-4.2.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/UserDocs/vendor/owl-carousel-2.3.4/owl.carousel.min.js"></script>
+    <script src="/UserDocs/vendor/nouislider-12.1.0/nouislider.min.js"></script>
+    <script src="/UserDocs/js/number.js"></script>
+    <script src="/UserDocs/js/main.js"></script>
+    <script src="/UserDocs/vendor/svg4everybody-2.1.9/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script><!-- font - fontawesome -->
+    <link rel="stylesheet" href="/UserDocs/vendor/fontawesome-5.6.1/css/all.min.css"><!-- font - stroyka -->
+    <link rel="stylesheet" href="/UserDocs/fonts/stroyka/stroyka.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97489509-6"></script>
+    <!--<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-97489509-6');</script>-->
+</head>
+  
+  
+    <!-- mobilemenu / end --><!-- site -->
+    <div class="site">
+        <!-- mobile site__header --><header class="site__header d-lg-none">
+            <div class="mobile-header mobile-header--sticky mobile-header--stuck">
+                <div class="mobile-header__panel">
+                    <div class="container">
+                        <div class="mobile-header__body">
+                            <button class="mobile-header__menu-button"><svg width="18px" height="14px"><use xlink:href="images/sprite.svg#menu-18x14"></use></svg></button> <a class="mobile-header__logo" href="index.html">
+
+                            </a><div class="mobile-header__search"><form class="mobile-header__search-form" action="#"><input class="mobile-header__search-input" name="search" placeholder="Search over 10,000 products" aria-label="Site search" type="text" autocomplete="off"> <button class="mobile-header__search-button mobile-header__search-button--submit" type="submit"><svg width="20px" height="20px"><use xlink:href="images/sprite.svg#search-20"></use></svg></button> <button class="mobile-header__search-button mobile-header__search-button--close" type="button"><svg width="20px" height="20px"><use xlink:href="images/sprite.svg#cross-20"></use></svg></button><div class="mobile-header__search-body"></div></form></div><div class="mobile-header__indicators"><div class="indicator indicator--mobile-search indicator--mobile d-sm-none"><button class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="images/sprite.svg#search-20"></use></svg></span></button></div><div class="indicator indicator--mobile d-sm-flex d-none"><a href="wishlist.html" class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="images/sprite.svg#heart-20"></use></svg> <span class="indicator__value">0</span></span></a></div><div class="indicator indicator--mobile"><a href="cart.html" class="indicator__button"><span class="indicator__area"><svg width="20px" height="20px"><use xlink:href="images/sprite.svg#cart-20"></use></svg> <span class="indicator__value">3</span></span></a></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header><!-- site__body --><div class="site__body">
+            <div class="page-header"><div class="page-header__container container"><div class="page-header__breadcrumb"><nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a> </li><li class="breadcrumb-item"><a href="#">Breadcrumb</a> <svg class="breadcrumb-arrow" width="6px" height="9px"><use xlink:href="images/sprite.svg#arrow-rounded-right-6x9"></use></svg></li><li class="breadcrumb-item active" aria-current="page">Giriş Yap</li></ol></nav></div><div class="page-header__title"><h1>Giriş Yap</h1></div></div></div><div class="block">
+                <div class="container" >
+                    <div class="row">
+                        <div class="col-md-6 d-flex">
+                            <div class="card flex-grow-1 mb-md-0" >
+                                <div class="card-body" ><h3 class="card-title">Login</h3><form asp-action="UserLogin" asp-controller="Account" method="post">
+                                    <div class="form-group" ><label>Kullanıcı Adı</label> <input type="text" class="form-control" asp-for="KullaniciAdi" placeholder="Kullanıcı Adını Gir"></div>
+                                    <div class="form-group"><label>Şifre</label>
+                                        <input type="password" asp-for="Sifre" class="form-control" placeholder="Şifre"> <small class="form-text text-muted"><a href="#">Şifremi Unuttum</a>
+                                        </small></div>
+                                        <div class="form-group"><div class="form-check"><span class="form-check-input input-check"><span class="input-check__body"><input class="input-check__input" type="checkbox" id="login-remember"> <span class="input-check__box"></span> <svg class="input-check__icon" width="9px" height="7px"><use xlink:href="images/sprite.svg#check-9x7"></use></svg> </span></span><label class="form-check-label" for="login-remember">Beni Hatırla</label></div></div><button type="submit" class="btn btn-primary mt-4">Giriş Yap</button></form></div></div></div><div class="col-md-6 d-flex mt-4 mt-md-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <body>
+      
+   
+
+
+  </body>
+
+</html>
+
+    

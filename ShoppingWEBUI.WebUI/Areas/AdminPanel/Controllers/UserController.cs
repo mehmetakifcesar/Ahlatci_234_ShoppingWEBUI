@@ -56,5 +56,26 @@ namespace ShoppingWEBUI.WebUI.Areas.AdminPanel.Controllers
                 return Json(new { success = false, HataBilgisi = responseObject.HataBilgisi });
             }
         }
+        //[HttpPost("/Admin/User")]
+        //public IActionResult Ban(int id)
+        //{
+        //    if (User.IsInRole("admin"))
+        //    {
+
+
+        //        var user = _users.Find(u => u.Id == id);
+        //        if (user == null)
+        //        {
+        //            return NotFound();
+        //        }
+        //        user.IsBanned = true; // Kullanıcıyı banla
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction("Index", "Home");
+        //    }
+            
+        //}
     }
 }

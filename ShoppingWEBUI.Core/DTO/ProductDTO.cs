@@ -14,7 +14,7 @@ namespace ShoppingWEBUI.Core.DTO
         public string FeaturedImage { get; set; }
         public string CategoryName { get; set; }
         public Guid? CategoryGuid { get; set; }
-        public double? UnitPrice { get; set; }
+        public double UnitPrice { get; set; }
 
     }
 }

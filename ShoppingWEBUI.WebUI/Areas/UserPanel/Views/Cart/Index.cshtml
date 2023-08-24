@@ -1,0 +1,36 @@
+﻿@using ShoppingWEBUI.Core.DTO;
+@using ShoppingWEBUI.Core.ViewModel;
+@model CartViewModel
+@{
+    ViewData["Title"] = "Alışveriş Sepeti";
+    Layout = "~/Areas/UserPanel/Views/Shared/Layout.cshtml";
+}
+
+
+<h2>Sepet</h2>
+
+@if (Model.CartItems.Any())
+{
+    <table>
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Fiyat</th>
+            <th>Adet</th>
+        </tr>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.Price</td>
+                <td>@item.Quantity</td>
+            </tr>
+        }
+        <tr>
+            <td colspan="3"><strong>Toplam Fiyat: @Model.TotalPrice</strong></td>
+        </tr>
+    </table>
+}
+else
+{
+    <p>Sepetiniz boş.</p>
+}
